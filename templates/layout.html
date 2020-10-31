@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+<!-- JQuery -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<!-- bootstrap same as before -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+
+
+{% block independentJSS %}
+
+{% endblock %}
+
+{% block extraScript %}
+
+{% endblock %}
+<style>
+    .stress{
+ font-weight: bold !important;
+}
+.deleteButton{
+        background-color: red;
+
+
+    }
+</style>
+{% block styles %}
+
+{% endblock %}
+
+
+
+
+
+</head>
+<body>
+<!--Source : https://getbootstrap.com/docs/4.0/components/navbar/-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <a class="navbar-brand" href="/">AnimeReview</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/create">Create</a>
+            </li>
+          </ul>
+          <div id ="clientWarn">
+              </div>
+            <input  type="text" placeholder="Search"  id = "clientBox">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="submitButton" >Search</button>
+          
+        </div>
+      </nav>
+<div id="baseHTML">
+{% block baseHTML %}
+
+{% endblock %}
+</div>
+
+    
+</body>
+</html>
+
+
+
