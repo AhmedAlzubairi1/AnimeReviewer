@@ -266,7 +266,6 @@ current_id = 32
 
 @app.route('/')
 def animeHomeLoad():
-    return "Hello bro"
     return render_template('anime.html', cards=animeInfo[-9:]) 
 
 @app.route('/view/<id>')
